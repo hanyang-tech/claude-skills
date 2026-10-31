@@ -151,7 +151,7 @@ Then wait.
 
 - **The user approves all, some or none.** They can also drop a family or turn a fix down. Record what they decided in `5-plan.md`.
 - **`--auto`:** go straight on with the safe and behavior-preserving batches. List the behavior-changing fixes and wait for a yes on each before applying it.
-- **`--report-only`:** write `report.md` from the plan, send it, and stop. Skip Step 6. Still do Step 7 for detection and verification.
+- **`--report-only`:** skip Step 6. Do Step 7 for detection, verification and the plan, then Step 8, writing `report.md` from the plan: nothing applied, and the planned fixes listed as what is left for the user to decide.
 
 ## Step 6 — Apply in batches
 
@@ -177,7 +177,7 @@ Count from the files in `<work>`, not from memory. Write `7-coverage.md`:
 | What | Count | Has to hold |
 |---|---|---|
 | Step files | <n> present and filled | all for the steps run |
-| References read in this run | catalog.md · fixing.md | both (catalog only with --report-only) |
+| References read in this run | catalog.md · fixing.md | both |
 | Files in scope | <n> · <n> with every family line | equal |
 | Family passes | <n> files × <n> families accounted for | all |
 | Findings | <n> in → <n> confirmed, <n> plausible, <n> dropped | in = the sum |

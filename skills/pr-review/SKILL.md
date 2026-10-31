@@ -40,7 +40,7 @@ A review that goes from the diff straight to the report holds the findings that 
 
 Each step writes its file before the next step starts, and each later step works from the earlier files, not from your memory of them. A missing file is a skipped step. The directory is kept when the review ends, and the report says where it is.
 
-**Step list.** Before Step 1, write `steps.md` with one line per step, 1 to 9, each naming the file it produces. If the session has a task list (TaskCreate or TodoWrite), also create one task per step. The tasks show the user where the review is; the file is what survives a context summary. Tick a step, and close its task, only when its file is written. If you find yourself partway through with no memory of the earlier steps, read `steps.md` and the files in `<work>`, and carry on from the first step that isn't ticked.
+**Step list.** Before Step 1, write `steps.md` with one line per step, 1 to 9, each naming the file it produces. Steps 1 to 8 write the numbered files above; Step 9, the report, is shown to the user and writes none. If the session has a task list (TaskCreate or TodoWrite), also create one task per step. The tasks show the user where the review is; the file is what survives a context summary. Tick a step, and close its task, only when its file is written. If you find yourself partway through with no memory of the earlier steps, read `steps.md` and the files in `<work>`, and carry on from the first step that isn't ticked.
 
 **References.** Steps 3 to 6 each name a file in `references/`. Read the whole file before starting the step, in this run, and write the step's file in the shape of that reference's output contract, with every section present. This file doesn't repeat what the references say, so a step done without its reference is done from guesswork. Read all three in both [modes](#modes): when agents do Steps 4 to 6 you still need the contracts to check what they return, and the methods to verify it in Step 7.
 
@@ -249,7 +249,7 @@ Before writing the report, count what was done. Count from the files in `<work>`
 ```
 | Step | Count | Has to hold |
 |---|---|---|
-| Files | <n> of 7 step files present and filled | 7 of 7 |
+| Files | <n> of 7 step files present and filled (1 to 7; this check writes the eighth) | 7 of 7 |
 | References read in this run | conventions.md · cases.md · simplification.md | 3 of 3 |
 | 2 Change read | <n> of <m> changed functions read whole · base version read for <n> · callers found for <n> | all, or the reason |
 | 2 Summary | <n> behavior changes · written before the description was read: yes/no | yes |

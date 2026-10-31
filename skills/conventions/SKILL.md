@@ -35,7 +35,7 @@ Each step writes a file to `<work>` before the next one starts, and later steps 
 ├── 3-candidates.md   # candidate conventions per topic, with examples
 ├── 4-measured.md     # each candidate counted across the scope, with the command
 ├── 5-decisions.md    # mixed areas and migrations, and what the user decided
-├── 6-coverage.md     # the completeness check
+├── 7-coverage.md     # the completeness check
 └── doc-draft.md      # the doc before it is written to the repository
 ```
 
@@ -43,7 +43,7 @@ Each step writes a file to `<work>` before the next one starts, and later steps 
 
 **References.**
 - Steps 3 and 4 follow [references/topics.md](references/topics.md).
-- Steps 6 and 7 follow [references/format.md](references/format.md).
+- Steps 1, 2 and 6 follow [references/format.md](references/format.md): the work files for Steps 1 and 2, then the doc itself.
 - Read each file in full, in this run, before its first step.
 - [scripts/established.py](scripts/established.py) ranks files for Step 2.
 
@@ -82,7 +82,7 @@ Run:
 python3 <skill dir>/scripts/established.py --repo <repo> [--scope <dir>] --top 5
 ```
 
-It ranks tracked source files by authors, commits and age, per top-level area, lists recently added files, and warns when the history is too thin to rely on.
+It ranks tracked source files by authors, commits and age, per top-level area, lists files added in the last 90 days (`--recent-days` changes the window), and warns when the history is too thin to rely on.
 
 From its output pick the **sample**:
 
@@ -173,7 +173,7 @@ Write the draft to `--out` in the repository. If `CLAUDE.md` exists, add the poi
 
 ## Step 7 — Check completeness
 
-Count from the files. Write `6-coverage.md`:
+Count from the files. Write `7-coverage.md`:
 
 ```
 | What | Count | Has to hold |
